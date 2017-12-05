@@ -9,8 +9,8 @@ class PostsController < ApplicationController
 
 	def new
 		@post = Post.new
-		post.title = "Title Goes Here"
-		post.description = "Desc goes here..."
-		post.save
+		post.title = params[:title]
+	  post.description = params[:description]
+	  post.save
 	end
 end
